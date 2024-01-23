@@ -334,6 +334,7 @@ textarea {
     border: none;
     padding: 1rem 0.6rem;
     border-radius: 3px;
+    background-color: var(--font-color);
 }
 
 footer {
