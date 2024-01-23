@@ -43,10 +43,6 @@ button {
     color: inherit;
 }
 
-label.btn {
-    padding: .54rem 1rem !important;
-}
-
 .btn {
     font-size: 1.4rem;
     padding: .6rem 1rem;
@@ -64,16 +60,7 @@ label.btn {
     border: 1px solid var(--details);
 }
 
-.btn-secondary {
-    margin-top: 3rem;
-    font-size: inherit;
-    border-radius: .25rem;
-    transition: all .3s ease-in-out;
-    cursor: pointer;
-}
-
-.btn:hover,
-.btn-secondary:hover {
+.btn:hover {
     transition: all .3s ease-in-out;
     filter: brightness(80%);
 }
@@ -198,6 +185,7 @@ section#s_home h1 {
 
 section#s_home h2 {
     font-size: 3rem;
+    font-weight: 100;
     margin-top: 1rem;
     margin-bottom: 3rem;
     width: 90%;
