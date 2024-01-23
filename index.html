@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#16911c">
-    <meta name="description" content="Portfólio pessoal -  Leandro Adrian da Silva">
+    <meta name="description" content="Portfólio de serviços - DevFreelas">
 
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/window-logo.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -19,6 +19,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <link rel="stylesheet" href="style.css">
 
     <title>Portfólio - DevFreelas</title>
@@ -27,7 +29,7 @@
 <body>
     <header data-aos="fade-down" data-aos-duration="800">
         <div class="container">
-            <img src="./images/window-logo.png" width="48" height="48">
+            <img src="./images/window-logo.png" width="64" height="64">
 
             <nav>
                 <a href="#s_home" class="lg-only">Início</a>
@@ -50,11 +52,9 @@
             <div class="container">
                 <div class="content">
                     <h1 data-aos="zoom-in" data-aos-duration="1000">DevFreelas</h1>
-                    <h2 data-aos="zoom-in" data-aos-duration="1000">
-                        Concretize suas ideias com excelência digital.
-                    </h2>
+                    <h2 data-aos="zoom-in" data-aos-duration="1000"> Concretize suas ideias com excelência digital.</h2>
 
-                    <a href="#" class="btn success" data-aos="fade-left" data-aos-duration="1000">Instagram</a>
+                    <a href="#" data-aos="fade-left" data-aos-duration="1000" class="btn success">Instagram</a>
                 </div>
             </div>
         </section>
@@ -160,14 +160,12 @@
                 <form id="contact_form">
                     <div class="form_group" data-aos="fade-left" data-aos-duration="1000">
                         <label for="contact_username">Nome</label>
-                        <input type="text" id="contact_username" autocomplete="username" required
-                            placeholder="Digite aqui seu nome">
+                        <input type="text" id="contact_username" required placeholder="Digite aqui seu nome">
                     </div>
 
                     <div class="form_group" data-aos="fade-left" data-aos-duration="1500">
-                        <label for="contact_username">Email</label>
-                        <input type="email" id="contact_reply" autocomplete="email" required
-                            placeholder="Digite aqui seu email">
+                        <label for="contact_reply">Email</label>
+                        <input type="email" id="contact_reply" required placeholder="Digite aqui seu email">
                     </div>
 
                     <div class="form_group" data-aos="fade-left" data-aos-duration="1500">
@@ -175,6 +173,9 @@
                         <textarea id="contact_message" rows="3" placeholder="Digite aqui detalhes do seu serviço"
                             required></textarea>
                     </div>
+
+                    <div class="g-recaptcha" data-sitekey="6LfyfFopAAAAAHStu_arVA5-ajqDLTpt-a1MK-2x"
+                        data-aos="fade-left" data-aos-duration="1500"></div>
 
                     <button id="btn_send" class="btn success" type="submit" data-aos="fade-left"
                         data-aos-duration="2000">

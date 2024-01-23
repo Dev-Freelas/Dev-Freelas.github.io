@@ -5,17 +5,19 @@ const sendContactFormBtn = document.querySelector("#btn_send");
 
 function sendMail() {
     (function () {
-        emailjs.init("D1Y5RpdMrX5s5LXT9");
+        emailjs.init("76FkiK-jhrAPfEU9b");
     }());
+
+    const service = "service_6j8htku";
+    const template = "template_65bu28c";
+    const captchaToken = grecaptcha.getResponse();
 
     const params = {
         message: document.querySelector("#contact_message").value,
         sendername: document.querySelector("#contact_username").value,
         reply: document.querySelector("#contact_reply").value,
+        "g-recaptcha-response": captchaToken,
     }
-
-    const service = "service_uc3x8hs";
-    const template = "template_1c2x9hq";
 
     emailjs.send(service, template, params)
         .then(res => {
@@ -24,6 +26,11 @@ function sendMail() {
         .catch(err => {
             console.error(err);
             sendContactFormBtn.textContent = "Erro ao enviar mensagem";
+        })
+        .success(function () {
+            setTimeout(function () {
+                sendContactFormBtn.textContent = "Enviar serviço";
+            }, 1000);
         });
 
     contactForm.reset();

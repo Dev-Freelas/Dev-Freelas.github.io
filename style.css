@@ -10,12 +10,12 @@
     --font-color: #e0e0e0;
 
     --bg: hsl(240, 4%, 5%);
-    --bg-2: hsl(240, 4%, 10%);
-    --bg-3: hsl(240, 4%, 15%);
+    --bg-2: hsl(240, 4%, 6%);
+    --bg-3: hsl(240, 4%, 12%);
 
     --details: #166091;
 
-    --border: #222;
+    --border: #232323;
 
     font-family: 'Inter', sans-serif;
 
@@ -334,7 +334,6 @@ textarea {
     border: none;
     padding: 1rem 0.6rem;
     border-radius: 3px;
-    background-color: var(--font-color);
 }
 
 footer {
