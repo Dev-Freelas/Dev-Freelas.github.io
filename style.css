@@ -10,8 +10,8 @@
     --font-color: #e0e0e0;
 
     --bg: hsl(240, 4%, 5%);
-    --bg-2: hsl(240, 4%, 6%);
-    --bg-3: hsl(240, 4%, 12%);
+    --bg-2: hsl(240, 4%, 10%);
+    --bg-3: hsl(240, 4%, 15%);
 
     --details: #166091;
 
@@ -116,16 +116,6 @@ header nav a:hover:not(.btn) {
 }
 
 @media (max-width: 768px) {
-    header {
-        height: auto;
-        padding: 1.3rem;
-    }
-
-    header .container {
-        flex-direction: column;
-        gap: 1.3rem;
-    }
-
     header nav .sm-only {
         display: initial;
         padding: 1rem;
@@ -194,6 +184,11 @@ section#s_home h2 {
 section#s_home .btn {
     padding: 1rem 2rem;
     font-style: 2rem;
+    transition: all .3s ease-in-out;
+}
+
+section#s_home .btn:hover {
+    padding-left: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -233,11 +228,6 @@ section#s_projetos .projects {
     border: 1px solid var(--border);
     background-color: var(--bg-3);
     border-radius: .25rem;
-    transition: all .3s ease-in-out;
-}
-
-.project:hover {
-    border-color: var(--details);
 }
 
 .project .project-details {
@@ -273,29 +263,25 @@ section#s_projetos .projects {
 }
 
 section#s_services .services {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.6rem;
+    text-align: center;
+    width: 100%;
 }
 
-.services .service {
+.services li {
     display: grid;
     place-items: center;
-    padding: 1rem;
-
-    border: 1px solid var(--border);
     background-color: var(--bg-3);
-
+    border: 1px solid var(--border);
     border-radius: .25rem;
-
-    cursor: default;
-    transition: all .3s ease-in-out;
+    padding: 1rem 1.3rem;
+    transition: all .3s ease;
 }
 
-.services .service:hover {
-    color: var(--details);
+.services li:hover {
     border-color: var(--details);
 }
 
@@ -304,11 +290,20 @@ section#s_contato form {
     gap: 1rem;
     width: 100%;
     max-width: 600px;
+    background-color: var(--bg-2);
+    padding: 2rem;
+    border-radius: .25rem;
+    overflow: hidden;
 }
 
 form .form_group {
     display: grid;
     gap: 0.3rem;
+}
+
+form .btn {
+    margin-top: 1rem;
+    padding: 1rem 0.6rem;
 }
 
 textarea {
@@ -321,7 +316,7 @@ textarea {
     outline: none;
     border: none;
     padding: 1rem 0.6rem;
-    border-radius: 3px;
+    border-radius: .25rem;
     background-color: var(--font-color);
 }
 

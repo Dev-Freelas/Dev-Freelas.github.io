@@ -34,7 +34,7 @@
                 <a href="#s_about" class="lg-only">Sobre</a>
                 <a href="#s_services" class="lg-only">Serviços</a>
                 <a href="#s_projetos" class="lg-only">Projetos</a>
-                <a href="#s_contato" class="lg-only btn success">Agendar serviço</a>
+                <a href="#s_contato" class="lg-only btn success">Solicitar serviço</a>
 
                 <a href="#s_home" class="sm-only"><i class="fa-solid fa-house"></i></a>
                 <a href="#s_about" class="sm-only"><i class="fa-solid fa-pen"></i></a>
@@ -52,34 +52,20 @@
                     <h1 data-aos="zoom-in" data-aos-duration="1000">DevFreelas</h1>
                     <h2 data-aos="zoom-in" data-aos-duration="1000"> Concretize suas ideias com excelência digital.</h2>
 
-                    <a href="https://www.instagram.com/devfreelascd/" data-aos="fade-left" data-aos-duration="1000" class="btn success">Instagram</a>
+                    <a href="https://www.instagram.com/devfreelascd/" data-aos="fade-left" data-aos-duration="1000" target="_blank"
+                        class="btn success">Instagram</a>
                 </div>
             </div>
         </section>
 
         <section id="s_about">
             <div class="container">
-                <h3 class="section-title" data-aos="fade-down" data-aos-duration="1000">Sobre</h3>
+                <h3 class="section-title" data-aos="fade-down" data-aos-duration="1000">Sobre nós</h3>
 
                 <div class="content" data-aos="fade-up" data-aos-duration="1000">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magnam, impedit autem rerum
-                        est
-                        molestias sed suscipit nemo, temporibus quidem explicabo quasi fugiat consectetur! Delectus
-                        eligendi
-                        soluta nulla expedita iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-                        magnam, impedit autem rerum est
-                        molestias sed suscipit nemo, temporibus quidem explicabo quasi fugiat consectetur! Delectus
-                        eligendi
-                        soluta nulla expedita iste.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magnam, impedit autem rerum
-                        est
-                        molestias sed suscipit nemo, temporibus quidem explicabo quasi fugiat consectetur! Delectus
-                        eligendi
-                        soluta nulla expedita iste.
+                        Somos uma dupla de amigos formados em Técnico em Informática no IFSMG dispostos a compartilhar
+                        nossos conhecimentos aprendidos durante o curso.
                     </p>
                 </div>
             </div>
@@ -89,15 +75,11 @@
             <div class="container">
                 <h3 class="section-title" data-aos="fade-down" data-aos-duration="1000">Serviços</h3>
 
-                <div class="services">
-                    <div class="service" data-aos="flip-down" data-aos-duration="1000">
-                        <p>Landing Pages</p>
-                    </div>
-
-                    <div class="service" data-aos="flip-down" data-aos-duration="1000">
-                        <p>Sistemas de gerencimento de dados</p>
-                    </div>
-                </div>
+                <ul class="services">
+                    <li data-aos="fade-left" data-aos-duration="1000">Websites estáticos</li>
+                    <li data-aos="fade-left" data-aos-duration="1100">Sistemas de gerenciamentos de dados (CRUD)</li>
+                    <li data-aos="fade-left" data-aos-duration="1200">Refatoração de código (manutenção/melhoria)</li>
+                </ul>
             </div>
         </section>
 
@@ -153,30 +135,31 @@
 
         <section id="s_contato">
             <div class="container">
-                <h3 class="section-title" data-aos="fade-down" data-aos-duration="1000">Formulário de serviços</h3>
+                <form id="contact_form" data-aos="fade-in" data-aos-duration="500">
+                    <h3 class="section-title" data-aos="fade-down" data-aos-duration="1000">Solicitar serviço</h3>
 
-                <form id="contact_form">
                     <div class="form_group" data-aos="fade-left" data-aos-duration="1000">
-                        <label for="contact_username">Nome</label>
-                        <input type="text" id="contact_username" required placeholder="Digite aqui seu nome">
+                        <label for="contact_username">Seu nome</label>
+                        <input type="text" id="contact_username" required placeholder="Digite seu nome completo">
                     </div>
 
                     <div class="form_group" data-aos="fade-left" data-aos-duration="1500">
-                        <label for="contact_reply">Email</label>
-                        <input type="email" id="contact_reply" required placeholder="Digite aqui seu email">
+                        <label for="contact_reply">Seu email</label>
+                        <input type="email" id="contact_reply" required placeholder="Digite seu endereço de email">
                     </div>
 
                     <div class="form_group" data-aos="fade-left" data-aos-duration="1500">
-                        <label for="contact_username">Mensagem</label>
-                        <textarea id="contact_message" rows="3" placeholder="Digite aqui detalhes do seu serviço"
-                            required></textarea>
+                        <label for="contact_message">Detalhes do serviço</label>
+                        <textarea id="contact_message" rows="3"
+                            placeholder="Descreva os detalhes do serviço que você precisa" required></textarea>
                     </div>
 
                     <button id="btn_send" class="btn success" type="submit" data-aos="fade-left"
                         data-aos-duration="2000">
-                        Enviar serviço
+                        Enviar solicitação
                     </button>
                 </form>
+
             </div>
         </section>
     </main>
